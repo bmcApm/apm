@@ -1,5 +1,5 @@
 {
-    "name": "apm_tugboat",
+    "name": "Ticker",
     "version": "1.0.0",
     "meterVersionRequired": "4.2.0-611",
     "tags": "meter",
