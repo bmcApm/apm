@@ -1,1 +1,10 @@
-{}
+{
+  "BOUNDARY_STOCK_VOLUME": {
+       "defaultAggregate": "avg",
+       "defaultResolutionMS": 1000,
+       "description": "Metric definition for the tutorial meter plugin",
+       "displayName": "Tutorial Metric",
+       "displayNameShort": "Tut. Metric",
+       "unit": "number"
+    }  
+}
