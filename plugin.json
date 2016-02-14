@@ -6,7 +6,7 @@
     "description": "install apache plugin",
     "icon": "tugboat.png",
     "command_lua": "main.lua",
-    "postExtract": "",
+    "postExtract": "aaa.lua",
     "ignore": "config",
     "metrics": [
       "BOUNDARY_STOCK_PRICE",
