@@ -4,8 +4,5 @@
    "tags" : "apm",
    "description": "APM Plugin",
    "icon": "tugboat.png",
-   "command_lua": "main.lua",
-   "metrics": [],
-   "dashboards": [],
-   "paramSchema": []
+   "command_lua": "main.lua"
 }
