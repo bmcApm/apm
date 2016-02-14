@@ -1,4 +1,5 @@
 {
+   "name": "apm",
    "description": "APM Plugin",
    "icon": "tugboat.png",
    "command_lua": "main.lua",
