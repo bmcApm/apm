@@ -1,23 +1,37 @@
-{
-   "name": "apm",
-   "version": "1.0.0",
-   "tags" : "apm",
-   "description": "APM Plugin",
-   "icon": "tugboat.png",
-   "command_lua": "main.lua",
-   "metrics": ["POSTGRESQL_EXCLUSIVE_LOCKS"],
-   "dashboards": [
+    {
+    "name": "Ticker",
+    "version": "1.0.0",
+    "meterVersionRequired": "4.2.0-611",
+    "tags": "meter",
+    "description": "Collects price and volume of a traded stock",
+    "icon": "ticker.png",
+    "command": "python init.py",
+    "postExtract": "python post-extract.py",
+    "ignore": "config",
+    "metrics": [
+      "BOUNDARY_STOCK_PRICE",
+      "BOUNDARY_STOCK_VOLUME"
+    ],
+    "dashboards": [
       {
-        "name": "APM",
-        "layout": "d-w=1&d-h=1&d-pad=5&d-light=1&d-bg=none&d-g-TUTORIAL_METRIC=0-0-1-1"
+        "name": "Stocks",
+        "layout": "d-w=1&d-h=2&d-pad=15&d-bg=none&d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1"
       }
     ],
-   "paramSchema": [
+    "paramArray": {
+      "itemTitle": [
+        "ticker"
+      ],
+      "schemaTitle": "Stock"
+    },
+    "paramSchema": [
         {
-            "title" : "host",
-            "description" : "database host name or IP",
-            "type" : "string",
-            "default" : "127.0.0.1"
-        }   
-   ]
-}
+          "title": "Ticker",
+          "name": "ticker",
+          "description": "Stock ticker symbol",
+          "type": "string",
+          "default": "",
+          "required": true
+        }
+      ]
+    }
