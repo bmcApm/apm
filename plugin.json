@@ -1,12 +1,12 @@
 {
-    "name": "Ticker",
+    "name": "tugboat",
     "version": "1.0.0",
     "meterVersionRequired": "4.2.0-611",
     "tags": "meter",
-    "description": "Collects price and volume of a traded stock",
-    "icon": "ticker.png",
-    "command": "python init.py",
-    "postExtract": "python post-extract.py",
+    "description": "tugboat",
+    "icon": "tugboat.png",
+    "command_lua": "main.lua",
+    "postExtract": "aa.lua",
     "ignore": "config",
     "metrics": [
       "BOUNDARY_STOCK_PRICE",
