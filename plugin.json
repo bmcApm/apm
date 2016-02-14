@@ -1,18 +1,20 @@
 {
-   "name": "apm",
-   "version": "1.0.0",
-   "meterVersionRequired": "4.2.0-611",
-   "unsupportedPlatforms": [],
-   "tags" : "apm",
    "description": "APM Plugin",
    "icon": "tugboat.png",
    "command_lua": "main.lua",
-   "metrics": [],
+   "metrics": ["POSTGRESQL_EXCLUSIVE_LOCKS"],
    "dashboards": [
       {
         "name": "APM",
         "layout": "d-w=1&d-h=1&d-pad=5&d-light=1&d-bg=none&d-g-TUTORIAL_METRIC=0-0-1-1"
       }
     ],
-   "paramSchema": []
+   "paramSchema": [
+        {
+            "title" : "host",
+            "description" : "database host name or IP",
+            "type" : "string",
+            "default" : "127.0.0.1"
+        }   
+   ]
 }
