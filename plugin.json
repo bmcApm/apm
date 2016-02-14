@@ -1,18 +1,1 @@
-{
-    "description" : "Scans the given device mount paths and reports the one with the least free space",
-    "icon" : "icon.png",
-    "command" : "node index.js $(pollInterval) $(devices)",
-    "postExtract" : "npm install",
-    "ignore" : "node_modules",
-    "metrics" : ["DISKUSE_SUMMARY"],
-    "paramSchema" : [
-        {
-            "title" : "Devices",
-            "description" : "The set of device mountings to check for free space.",
-            "type" : "array",
-            "items" : {
-                "type" : "string"
-            }
-        }
-    ]
-}
+{"name":"Ticker","version":"1.0.0","meterVersionRequired":"4.2.0-611","tags":"meter","description":"Collects price and volume of a traded stock","icon":"ticker.png","command":"python init.py","postExtract":"python post-extract.py","ignore":"config","metrics":["BOUNDARY_STOCK_PRICE","BOUNDARY_STOCK_VOLUME"],"dashboards":[{"name":"Stocks","layout":"d-w=1&d-h=2&d-pad=15&d-bg=none&d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1"}],"paramArray":{"itemTitle":["ticker"],"schemaTitle":"Stock"},"paramSchema":[{"title":"Ticker","name":"ticker","description":"Stock ticker symbol","type":"string","default":"","required":true}]}
