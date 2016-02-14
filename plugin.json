@@ -24,7 +24,7 @@
       ],
       "schemaTitle": "Stock"
     },
-    "paramSchema": [a
+    "paramSchema": [
         {
           "title": "Ticker",
           "name": "ticker",
