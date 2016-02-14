@@ -1,0 +1,10 @@
+{
+  "POSTGRESQL_ACCESS_SHARE_LOCKS": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "PostgreSQL - Locks Access Share",
+    "displayName": "PostgreSQL - Locks Access Share",
+    "displayNameShort": "PSQL - Lck Acc Shr",
+    "unit": "number"
+  }
+}
